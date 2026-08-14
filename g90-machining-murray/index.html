@@ -5,79 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>G90 Machining, LLC — Murray</title>
-<meta name="description" content="Machining experts producing precision parts with exceptional quality">
+<meta name="description" content="Accurate Parts Made with Precision Every Time">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --accent: hsl(241 68% 42%);
-    --accent-dark: hsl(241 70% 30%);
-    --accent-soft: hsl(241 60% 96%);
-    --ink:#15181d; --muted:#5b6472; --line:#e4e8ee; --bg:#fff;
+    --ink:#14181c; --bg:#ffffff; --surface:#f2f4f6; --line:#d9dee3; --muted:#5d6873;
+    --accent:#d1541f; --accent-dark:#a33d12; --accent-soft:#fdf1eb;
+    --r:3px;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 'Barlow', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand{font-family:'Barlow Condensed', Impact, sans-serif;text-transform:uppercase;
+    letter-spacing:-.01em;font-weight:700}
   img{max-width:100%}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
   a{color:var(--accent-dark)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
 
-  header{background:var(--accent);color:#fff}
-  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
-  .brand{font-weight:700;font-size:19px;letter-spacing:-.2px}
+  header{color:#ffffff;background:#a33d12;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(135deg,#a33d12,#0f1215);background-size:28px 28px,28px 28px,100% 100%}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+  .brand{font-size:20px;text-transform:none;letter-spacing:-.2px}
   .navcall{display:inline-block;background:#fff;color:var(--accent-dark);text-decoration:none;
-    font-weight:650;padding:9px 16px;border-radius:999px;white-space:nowrap;font-size:15px}
-  .hero{padding:58px 0 66px}
-  .hero h1{margin:0 0 14px;font-size:clamp(30px,5.4vw,50px);line-height:1.1;letter-spacing:-1px;font-weight:750}
-  .hero p{margin:0 0 26px;font-size:clamp(16px,2.2vw,20px);opacity:.94;max-width:34em}
+    font-weight:700;padding:10px 17px;border-radius:var(--r);white-space:nowrap;font-size:15px;
+    font-family:'Barlow', Helvetica, Arial, sans-serif;text-transform:none}
+  .hero{padding:64px 0 74px}
+  .hero h1{margin:0 0 16px;font-size:clamp(31px,5.6vw,54px);line-height:1.08}
+  .hero .sub{margin:0 0 28px;font-size:clamp(16px,2.2vw,20px);opacity:.93;max-width:34em}
   .cta{display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;text-decoration:none;font-weight:650;padding:14px 26px;border-radius:10px;font-size:16px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 27px;
+    border-radius:var(--r);font-size:16px;font-family:'Barlow', Helvetica, Arial, sans-serif;text-transform:none}
   .btn-solid{background:#fff;color:var(--accent-dark)}
-  .btn-ghost{border:1.5px solid rgba(255,255,255,.65);color:#fff}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#ffffff}
 
-  .facts{border-bottom:1px solid var(--line);background:var(--accent-soft)}
-  .facts .wrap{display:flex;flex-wrap:wrap;gap:26px;padding:16px 22px;font-size:15px;color:var(--muted)}
+  .facts{background:var(--surface);border-bottom:1px solid var(--line)}
+  .facts .wrap{display:flex;flex-wrap:wrap;gap:24px;padding:15px 22px;font-size:15px;color:var(--muted)}
   .facts b{color:var(--ink)}
   .stars{color:var(--accent-dark);letter-spacing:2px}
 
-  section{padding:56px 0}
-  h2{font-size:clamp(21px,3vw,28px);margin:0 0 18px;letter-spacing:-.4px}
-  .lede{font-size:17px;color:var(--muted);max-width:62ch;margin:0}
+  .urgency{background:var(--accent-dark);color:#fff}
+  .urgency .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    padding:15px 22px;font-size:15.5px}
+  .urgency a{color:#fff;font-weight:700}
 
-  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:26px}
-  .card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
-  .card h3{margin:0 0 8px;font-size:17px}
+  section{padding:58px 0}
+  section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(21px,3vw,29px);margin:0 0 18px}
+  .lede{font-size:17px;color:var(--muted);max-width:64ch;margin:0}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));margin-top:26px}
+  .card{border:1px solid var(--line);border-radius:var(--r);padding:23px;background:var(--bg)}
+  .card h3{margin:0 0 8px;font-size:17px;text-transform:none;letter-spacing:0}
   .card p{margin:0;color:var(--muted);font-size:15px}
 
-  .reviews{background:#f7f9fb;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .rev{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
-  .rev p{margin:0 0 14px;font-size:15px}
-  .rev .who{font-size:13px;color:var(--muted)}
-  .attr{margin-top:22px;font-size:12.5px;color:var(--muted)}
+  .revbox{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--bg);
+    display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .revbox .big{font-size:34px;font-family:'Barlow Condensed', Impact, sans-serif;line-height:1}
 
-  .photos{border:2px dashed var(--line);border-radius:14px;padding:38px 24px;text-align:center;
-    color:var(--muted);background:#fbfcfd;margin-top:24px}
+  .photos{border:2px dashed var(--line);border-radius:var(--r);padding:40px 24px;text-align:center;
+    color:var(--muted);background:var(--surface);margin-top:24px}
   .photos b{display:block;color:var(--ink);margin-bottom:6px;font-size:16px}
 
-  .split{display:grid;gap:34px;grid-template-columns:1fr 1fr;align-items:start}
+  .split{display:grid;gap:36px;grid-template-columns:1fr 1fr;align-items:start}
   table.hours{border-collapse:collapse;width:100%;font-size:15px}
   table.hours td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
-  table.hours td:first-child{color:var(--ink);font-weight:600;width:44%}
+  table.hours td:first-child{color:var(--ink);font-weight:600;width:46%}
 
-  footer{background:#12151a;color:#aeb7c4;padding:34px 0;font-size:14px}
+  footer{background:#12151a;color:#aeb7c4;padding:36px 0;font-size:14px}
   footer a{color:#fff}
-  .mock{background:#fff6d8;border-top:1px solid #f0dfa4;color:#5a4b12;
-    padding:12px 0;font-size:13.5px;text-align:center}
+  .mock{background:#fff6d8;border-bottom:1px solid #f0dfa4;color:#5a4b12;
+    padding:12px 0;font-size:13.5px;text-align:center;font-family:'Barlow', Helvetica, Arial, sans-serif}
 
   .sticky{position:fixed;left:0;right:0;bottom:0;background:var(--accent);padding:12px 16px;
-    display:none;z-index:20;box-shadow:0 -2px 14px rgba(0,0,0,.16)}
+    display:none;z-index:20;box-shadow:0 -2px 14px rgba(0,0,0,.18)}
   .sticky a{display:block;text-align:center;color:var(--accent-dark);background:#fff;
-    text-decoration:none;font-weight:700;padding:13px;border-radius:10px}
+    text-decoration:none;font-weight:700;padding:13px;border-radius:var(--r)}
   @media(max-width:720px){
     .split{grid-template-columns:1fr}
     .navcall{display:none}
     .sticky{display:block}
-    body{padding-bottom:74px}
-    section{padding:42px 0}
+    body{padding-bottom:76px}
+    section{padding:44px 0}
+    .hero{padding:48px 0 56px}
   }
 </style>
 </head>
@@ -91,52 +101,29 @@
     <a class="navcall" href="tel:+18016415943">(801) 641-5943</a>
   </div>
   <div class="wrap hero">
-    <h1>Machining experts producing precision parts with exceptional quality</h1>
-    <p>Manufacturer serving Murray and the surrounding area.</p>
-    <div class="cta">
-      <a class="btn btn-solid" href="tel:+18016415943">Call (801) 641-5943</a>
-      <a class="btn btn-ghost" href="#contact">Hours &amp; location</a>
-    </div>
+    <h1>Accurate Parts Made with Precision Every Time</h1>
+    <p class="sub">Manufacturer serving Murray and the surrounding area.</p>
+    <div class="cta"><a class="btn btn-solid" href="tel:+18016415943">Request a quote &middot; (801) 641-5943</a><a class="btn btn-ghost" href="#contact">Shop hours &amp; location</a></div>
   </div>
 </header>
 
-<div class="facts"><div class="wrap">
-  <span class="stars">★★★★★</span><span><b>5</b> from 5 Google reviews</span>
-  <span><b>Murray</b></span>
-  <span><b>(801) 641-5943</b></span>
-</div></div>
+<div class="facts"><div class="wrap"><span class="stars">★★★★★</span><span><b>5</b> on Google</span><span><b>Murray</b></span><span><b>(801) 641-5943</b></span></div></div>
 
-<section class="wrap">
-  <h2>About us</h2>
-  <p class="lede">We are a manufacturer located in Murray, specializing in precision machining services. We work with customers to design and produce custom parts for various applications. Our team is experienced in creating prototypes and resolving design issues through collaboration with clients. We aim to deliver high-quality products that meet our customers&#x27; needs.</p>
-  <div class="photos">
-    <b>Your photos go here</b>
-    Send over a few shots of your work and they will fill this space.
-  </div>
-</section>
-
-<section class="wrap" style="padding-top:0">
-  <h2>What we do</h2>
-  <div class="grid"><div class="card"><h3>CNC Milling</h3><p>Precision machining using computer-controlled milling machines.</p></div><div class="card"><h3>CNC Turning</h3><p>Computer-controlled turning of parts to precise specifications.</p></div><div class="card"><h3>Tooling and Die Repair</h3><p>Repair and maintenance of metal tools and dies used in manufacturing.</p></div></div>
-</section>
-
-<section class="reviews"><div class="wrap"><h2>What customers say</h2><div class="grid"><div class="rev"><p>“We&#x27;ve been working with G90 Machining for a variety of different parts for our company, and we couldn&#x27;t be more pleased with their work. The quality of the parts is consistently excellent, and their attention to detail is top-notch.
-
-Dennis, is the best.  He&#x27;s incredibly responsive to emails, always quick to address any questions or conce”</p><div class="who">Natalie Jarvis · ★★★★★</div></div><div class="rev"><p>“I can&#x27;t say enough good things about G90 Machining. The owner, Dennis, is hands down a top-notch machinist. He puts time and effort into every job he does, and it shows in the quality of his work. He treats people with the utmost respect.”</p><div class="who">Pepper Debenham · ★★★★★</div></div><div class="rev"><p>“These guys do a fantastic job on my CNC parts! They design a lot of my prototypes and help resolve design issues I did see ahead of time.
-
-Honest work for a competitive price!
-
-Would recommend for any CNC machining need.”</p><div class="who">John Beynon · ★★★★★</div></div></div><div class="attr">Reviews shown as published on Google.</div></div></section>
+<section class=""><div class="wrap"><h2>About the shop</h2><p class="lede">We are a manufacturing company based in Murray, specializing in precision machining services. Our capabilities include working with various materials to produce parts that meet specific tolerances. We offer design assistance and turnaround times tailored to our customers&#x27; needs. Our goal is to deliver high-quality products on time.</p></div></section>
+<section class="alt"><div class="wrap"><h2>Capabilities</h2><div class="grid"><div class="card"><h3>CNC Parts</h3><p>The business designs and manufactures complex CNC parts.</p></div><div class="card"><h3>Prototype Development</h3><p>They help resolve design issues and develop prototypes.</p></div><div class="card"><h3>Machining Services</h3><p>The company provides high-quality machining services with attention to precision and tolerances.</p></div></div></div></section>
+<section class=""><div class="wrap"><h2>Materials &amp; processes</h2><div class="grid"><div class="card"><h3>CNC Machines</h3><p>They use CNC machines for their operations.</p></div><div class="card"><h3>Aluminum</h3><p>Aluminum is one of the materials they work with.</p></div><div class="card"><h3>Steel</h3><p>Steel is also among the materials they handle.</p></div></div></div></section>
+<section class="alt"><div class="wrap"><h2>Our work</h2><div class="photos"><b>Your photos go here</b>Send over a few shots of your work and they will fill this space.</div></div></section>
+<section class=""><div class="wrap"><h2>What customers say</h2><div class="revbox"><div><div class="big">5 ★</div><div style="color:var(--muted);font-size:15px;margin-top:6px">from 5 Google reviews</div></div><a class="btn btn-solid" style="background:var(--accent);color:#fff" href="https://maps.google.com/?cid=18356402169448103017&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Read them on Google</a></div></div></section>
 
 <section class="wrap" id="contact">
   <div class="split">
     <div>
-      <h2>Get in touch</h2>
+      <h2>Get a quote</h2>
       <p class="lede">4091 S 420 W, Murray</p>
-      <p style="margin-top:16px"><a href="tel:+18016415943">(801) 641-5943</a></p>
+      <p style="margin-top:16px"><a href="tel:+18016415943">(801) 641-5943</a> &nbsp;·&nbsp; <a href="https://maps.google.com/?cid=18356402169448103017&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Directions</a></p>
     </div>
     <div>
-      <h2>Hours</h2>
+      <h2>Shop hours</h2>
       <table class="hours"><tr><td>Monday</td><td>8:00 AM – 5:00 PM</td></tr><tr><td>Tuesday</td><td>8:00 AM – 5:00 PM</td></tr><tr><td>Wednesday</td><td>8:00 AM – 5:00 PM</td></tr><tr><td>Thursday</td><td>8:00 AM – 5:00 PM</td></tr><tr><td>Friday</td><td>8:00 AM – 5:00 PM</td></tr><tr><td>Saturday</td><td>Closed</td></tr><tr><td>Sunday</td><td>Closed</td></tr></table>
     </div>
   </div>
@@ -145,11 +132,11 @@ Would recommend for any CNC machining need.”</p><div class="who">John Beynon �
 <footer><div class="wrap">
   <div><strong style="color:#fff">G90 Machining, LLC</strong> · Murray</div>
   <div style="margin-top:10px">
-    Proposed design by <a href="#">Beehive Digital Solutions</a>. Built 2026-08-13.
+    Proposed design by <a href="#">Beehive Digital Solutions</a>. Built 2026-08-14.
     Not affiliated with or authorized by G90 Machining, LLC.
   </div>
 </div></footer>
 
-<div class="sticky"><a href="tel:+18016415943">Call (801) 641-5943</a></div>
+<div class="sticky"><a href="tel:+18016415943">Request a quote &middot; (801) 641-5943</a></div>
 </body>
 </html>
