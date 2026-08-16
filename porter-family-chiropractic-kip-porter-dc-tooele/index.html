@@ -1,318 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Porter Family Chiropractic | Tooele, UT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Porter Family Chiropractic - Kip Porter DC — Tooele</title>
+<meta name="description" content="Relief through expert care for your back and body.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500&display=swap">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    background:#fafaf8;
-    color:#333;
-    font-family:'Nunito',Arial,sans-serif;
-    line-height:1.7;
-    font-size:16px;
+  :root{
+    --ink:#16242b; --bg:#ffffff; --surface:#f0f7f8; --line:#d8e5e8; --muted:#57676e;
+    --accent:#0f7d8c; --accent-dark:#0a5b66; --accent-soft:#e8f5f7;
+    --r:14px;
   }
-  a{color:inherit;text-decoration:none;}
-  img{display:block;max-width:100%;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
-  h1,h2,h3{font-family:'Merriweather',Georgia,serif;color:#1a3c5e;font-weight:700;line-height:1.3;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 'Inter', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand{font-family:'Outfit', Helvetica, sans-serif;text-transform:none;
+    letter-spacing:-.02em;font-weight:700}
+  img{max-width:100%}
+  a{color:var(--accent-dark)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
 
-  /* top bar: logo + phone/social */
-  .topbar{background:#fafaf8;padding:28px 0 22px;border-bottom:1px solid #e4e1da;}
-  .topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
-  .logo-box{
-    border:2px solid #1a3c5e;padding:10px 26px;text-align:center;background:#fff;
-    display:flex;flex-direction:column;align-items:center;gap:2px;
+  header{color:#ffffff;background:#0f7d8c;background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1px),radial-gradient(120% 100% at 88% -10%,rgba(255,255,255,.20),transparent 62%),linear-gradient(150deg,#0f7d8c,#0a5b66);background-size:22px 22px,100% 100%,100% 100%}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+  .brand{font-size:20px;text-transform:none;letter-spacing:-.2px}
+  .navcall{display:inline-block;background:#fff;color:var(--accent-dark);text-decoration:none;
+    font-weight:700;padding:10px 17px;border-radius:var(--r);white-space:nowrap;font-size:15px;
+    font-family:'Inter', Helvetica, Arial, sans-serif;text-transform:none}
+  .hero{padding:64px 0 74px}
+  .hero h1{margin:0 0 16px;font-size:clamp(31px,5.6vw,54px);line-height:1.08}
+  .hero .sub{margin:0 0 28px;font-size:clamp(16px,2.2vw,20px);opacity:.93;max-width:34em}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 27px;
+    border-radius:var(--r);font-size:16px;font-family:'Inter', Helvetica, Arial, sans-serif;text-transform:none}
+  .btn-solid{background:#fff;color:var(--accent-dark)}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#ffffff}
+
+  .facts{background:var(--surface);border-bottom:1px solid var(--line)}
+  .facts .wrap{display:flex;flex-wrap:wrap;gap:24px;padding:15px 22px;font-size:15px;color:var(--muted)}
+  .facts b{color:var(--ink)}
+  .stars{color:var(--accent-dark);letter-spacing:2px}
+
+  .urgency{background:var(--accent-dark);color:#fff}
+  .urgency .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    padding:15px 22px;font-size:15.5px}
+  .urgency a{color:#fff;font-weight:700}
+
+  section{padding:58px 0}
+  section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(21px,3vw,29px);margin:0 0 18px}
+  .lede{font-size:17px;color:var(--muted);max-width:64ch;margin:0}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));margin-top:26px}
+  .card{border:1px solid var(--line);border-radius:var(--r);padding:23px;background:var(--bg)}
+  .card h3{margin:0 0 8px;font-size:17px;text-transform:none;letter-spacing:0}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+
+  .revbox{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:var(--bg);
+    display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .revbox .big{font-size:34px;font-family:'Outfit', Helvetica, sans-serif;line-height:1}
+
+  .photos{border:2px dashed var(--line);border-radius:var(--r);padding:40px 24px;text-align:center;
+    color:var(--muted);background:var(--surface);margin-top:24px}
+  .photos b{display:block;color:var(--ink);margin-bottom:6px;font-size:16px}
+
+  .shots{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:24px}
+  .shots figure{margin:0;border-radius:var(--r);overflow:hidden;background:var(--surface);
+    aspect-ratio:4/3}
+  .shots img{width:100%;height:100%;object-fit:cover;display:block}
+  .note{margin:14px 0 0;font-size:13.5px;color:var(--muted)}
+
+  .split{display:grid;gap:36px;grid-template-columns:1fr 1fr;align-items:start}
+  table.hours{border-collapse:collapse;width:100%;font-size:15px}
+  table.hours td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  table.hours td:first-child{color:var(--ink);font-weight:600;width:46%}
+
+  footer{background:#12151a;color:#aeb7c4;padding:36px 0;font-size:14px}
+  footer a{color:#fff}
+  .mock{background:#fff6d8;border-bottom:1px solid #f0dfa4;color:#5a4b12;
+    padding:12px 0;font-size:13.5px;text-align:center;font-family:'Inter', Helvetica, Arial, sans-serif}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:var(--accent);padding:12px 16px;
+    display:none;z-index:20;box-shadow:0 -2px 14px rgba(0,0,0,.18)}
+  .sticky a{display:block;text-align:center;color:var(--accent-dark);background:#fff;
+    text-decoration:none;font-weight:700;padding:13px;border-radius:var(--r)}
+
+  nav.main{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  nav.main a{color:#ffffff;text-decoration:none;font-family:'Inter', Helvetica, Arial, sans-serif;font-size:15.5px;
+    opacity:.86;text-transform:none;letter-spacing:0;padding:4px 0;border-bottom:2px solid transparent}
+  nav.main a:hover{opacity:1}
+  nav.main a.on{opacity:1;border-bottom-color:#ffffff;font-weight:600}
+  .menubtn{display:none;background:none;border:1.5px solid rgba(255,255,255,.5);color:#ffffff;
+    border-radius:var(--r);padding:8px 13px;font:600 15px 'Inter', Helvetica, Arial, sans-serif;cursor:pointer}
+
+  .pagehead{padding:44px 0 46px}
+  .pagehead h1{margin:0 0 10px;font-size:clamp(27px,4.4vw,40px);line-height:1.12}
+  .pagehead p{margin:0;opacity:.92;font-size:17px;max-width:40em}
+
+  form.mock{display:grid;gap:14px;max-width:520px;margin-top:22px}
+  form.mock label{font-size:14px;font-weight:600;display:block;margin-bottom:6px}
+  form.mock input,form.mock textarea{width:100%;padding:12px 13px;border:1px solid var(--line);
+    border-radius:var(--r);font:15px 'Inter', Helvetica, Arial, sans-serif;background:var(--bg);color:var(--ink)}
+  form.mock textarea{min-height:120px;resize:vertical}
+  form.mock button{justify-self:start;background:var(--accent);color:#fff;border:0;
+    padding:14px 28px;border-radius:var(--r);font:700 16px 'Inter', Helvetica, Arial, sans-serif;cursor:pointer}
+  .formnote{margin-top:12px;font-size:14px;color:var(--muted);min-height:1.2em}
+
+  @media(max-width:820px){
+    .split{grid-template-columns:1fr}
+    .navcall{display:none}
+    .sticky{display:block}
+    body{padding-bottom:76px}
+    section{padding:44px 0}
+    .hero{padding:48px 0 56px}
+    .menubtn{display:block}
+    nav.main{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:2px;
+      padding:10px 0 4px}
+    nav.main.open{display:flex}
+    nav.main a{padding:9px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.16)}
   }
-  .logo-box .name{font-family:'Merriweather',Georgia,serif;font-weight:700;font-size:1.3rem;color:#1a3c5e;letter-spacing:0.02em;}
-  .logo-box .phone-big{font-family:'Merriweather',Georgia,serif;font-weight:700;font-size:1.15rem;color:#1a3c5e;margin-top:2px;}
-  .logo-box .docs{font-size:0.82rem;color:#444;margin-top:6px;}
-  .logo-box .addr{font-size:0.72rem;color:#777;margin-top:4px;}
-  .topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
-  .topbar-phone{display:flex;align-items:center;gap:8px;font-size:1.15rem;color:#555;font-weight:700;}
-  .topbar-social{display:flex;gap:10px;}
-  .social-dot{width:34px;height:34px;border-radius:50%;background:#3B5998;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.95rem;font-weight:700;}
-  .social-dot.book{background:#2AACC4;border-radius:6px;font-size:0.6rem;line-height:1.1;text-align:center;}
-
-  /* nav */
-  nav.mainnav{background:#fff;border-bottom:1px solid #e4e1da;}
-  .navlist{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:36px;padding:16px 0;font-size:0.82rem;letter-spacing:0.04em;color:#7a7a7a;font-weight:700;text-transform:uppercase;}
-  .navlist a{padding-bottom:14px;border-bottom:2px solid transparent;transition:color .15s, border-color .15s;}
-  .navlist a:hover, .navlist a.active{color:#1a3c5e;border-color:#d9a441;}
-
-  /* hero */
-  .hero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;}
-  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(20,30,15,0.55) 0%, rgba(20,30,15,0.28) 45%, rgba(20,30,15,0.05) 70%);z-index:1;}
-  .hero-content{position:relative;z-index:2;padding:60px 0;}
-  .hero-content h1{color:#fff;font-size:clamp(2rem,4.4vw,3.1rem);margin-bottom:6px;}
-  .hero-content .sub{color:#f2f2ea;font-size:clamp(1.2rem,2.4vw,1.6rem);font-family:'Nunito',sans-serif;font-weight:600;margin-bottom:34px;}
-  .btn-gold{
-    display:inline-block;background:#e0ab45;color:#fff;font-weight:800;text-transform:uppercase;
-    font-size:0.95rem;letter-spacing:0.02em;padding:18px 34px;border-radius:100px;
-    text-align:center;transition:background .15s;
-  }
-  .btn-gold:hover{background:#c9962f;}
-
-  /* icon strip */
-  .icon-strip{background:#f2efe8;}
-  .icon-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-  .icon-tile{padding:34px 20px;text-align:center;border-right:1px solid #e4e1da;}
-  .icon-tile:last-child{border-right:none;}
-  .icon-tile svg{width:52px;height:52px;margin:0 auto 12px;display:block;color:#5b6a72;}
-  .icon-tile p{font-size:0.85rem;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:0.02em;}
-  @media (max-width:760px){
-    .icon-strip .wrap{grid-template-columns:repeat(2,1fr);}
-    .icon-tile{border-right:1px solid #e4e1da;border-bottom:1px solid #e4e1da;}
-  }
-
-  section{padding:64px 0;}
-  .section-title{text-align:center;margin-bottom:44px;}
-  .section-title p.kicker{color:#c9962f;font-weight:800;text-transform:uppercase;font-size:0.85rem;letter-spacing:0.06em;margin-bottom:8px;}
-  .section-title h2{font-size:clamp(1.7rem,3vw,2.2rem);}
-  .rule{width:60px;height:3px;background:#d9a441;margin:16px auto 0;}
-
-  /* about */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
-  @media (max-width:820px){.about-grid{grid-template-columns:1fr;}}
-  .about-grid img{border:6px solid #fff;box-shadow:0 0 0 1px #e4e1da;width:100%;height:auto;}
-  .about-copy p{margin-bottom:16px;color:#444;}
-  .about-quote{margin-top:20px;padding:18px 22px;background:#fff;border-left:4px solid #d9a441;font-style:italic;color:#1a3c5e;}
-  .about-quote small{display:block;margin-top:10px;font-style:normal;color:#888;font-weight:700;font-size:0.8rem;}
-
-  /* services */
-  .services-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fff;border:1px solid #e4e1da;}
-  @media (max-width:760px){.services-list{grid-template-columns:1fr 1fr;}}
-  @media (max-width:520px){.services-list{grid-template-columns:1fr;}}
-  .service-item{padding:30px 26px;border-right:1px solid #e4e1da;border-bottom:1px solid #e4e1da;}
-  .service-item h3{font-size:1.05rem;margin-bottom:8px;}
-  .service-item p{font-size:0.92rem;color:#555;}
-
-  /* approach */
-  .approach-section{background:#f2efe8;}
-  .approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
-  @media (max-width:820px){.approach-grid{grid-template-columns:1fr;}}
-  .approach-copy p{color:#444;margin-top:14px;max-width:52ch;}
-  .approach-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #ded9cb;}
-  .approach-item:last-child{border-bottom:none;}
-  .approach-item .num{font-family:'Merriweather',Georgia,serif;font-weight:700;color:#d9a441;font-size:1.3rem;flex-shrink:0;}
-  .approach-item h4{color:#1a3c5e;font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;margin-bottom:4px;}
-  .approach-item p{color:#555;font-size:0.92rem;}
-
-  /* reviews */
-  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  @media (max-width:820px){.reviews-grid{grid-template-columns:1fr;}}
-  .review-box{background:#fff;border:1px solid #e4e1da;padding:26px;}
-  .stars{color:#d9a441;margin-bottom:10px;letter-spacing:2px;}
-  .review-box p.quote{color:#444;font-size:0.95rem;margin-bottom:14px;}
-  .review-box .who{font-weight:800;color:#1a3c5e;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.02em;}
-  .rec-line{text-align:center;margin-top:36px;color:#555;font-size:0.95rem;}
-  .rec-line b{color:#1a3c5e;font-size:1.3rem;font-family:'Merriweather',Georgia,serif;}
-
-  /* visit */
-  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
-  @media (max-width:820px){.visit-grid{grid-template-columns:1fr;}}
-  .visit-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #e4e1da;}
-  .visit-row:first-child{padding-top:0;}
-  .visit-row .k{font-weight:800;color:#1a3c5e;width:90px;flex-shrink:0;font-size:0.9rem;}
-  .visit-row .v{color:#444;font-size:0.95rem;}
-  .visit-row .v small{display:block;color:#888;margin-top:2px;}
-  .map-box{border:1px solid #e4e1da;aspect-ratio:4/3;overflow:hidden;}
-  .map-box iframe{width:100%;height:100%;border:0;}
-
-  footer{background:#1a3c5e;color:#c7d2dc;padding:40px 0;text-align:center;font-size:0.85rem;}
-  footer .fname{font-family:'Merriweather',Georgia,serif;color:#fff;font-size:1.1rem;margin-bottom:8px;}
-  footer a:hover{color:#fff;}
-  footer .flinks{display:flex;justify-content:center;gap:26px;margin:14px 0;flex-wrap:wrap;font-weight:700;}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap topbar-inner">
-    <div class="logo-box">
-      <div class="name">PORTER FAMILY CHIROPRACTIC</div>
-      <div class="phone-big">(435) 833-0977</div>
-      <div class="docs">Kip Porter, DC</div>
-      <div class="addr">275 S Main St, Tooele, Utah 84074</div>
-    </div>
-    <div class="topbar-right">
-      <div class="topbar-phone">&#128222; (435) 833-0977</div>
-      <div class="topbar-social">
-        <a href="#" class="social-dot" aria-label="Facebook">f</a>
-        <a href="#visit" class="social-dot book">Book<br>Now</a>
-      </div>
-    </div>
+<div class="mock">Design preview prepared by Beehive Digital Solutions — not the official site for Porter Family Chiropractic - Kip Porter DC. Links work; forms are not connected.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./" style="color:inherit;text-decoration:none">Porter Family Chiropractic - Kip Porter DC</a>
+    <button class="menubtn" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <nav class="main" id="nav"><a class="on" href="./">Home</a><a class="" href="about/">About the practice</a><a class="" href="services/">What we treat</a><a class="" href="contact/">Contact</a></nav>
+    <a class="navcall" href="tel:+14358330977">(435) 833-0977</a>
   </div>
-</div>
+  <div class="wrap hero"><h1>Relief through expert care for your back and body.</h1><p class="sub">Chiropractor serving Tooele and the surrounding area.</p><div class="cta"><a class="btn btn-solid" href="tel:+14358330977">Book an appointment &middot; (435) 833-0977</a><a class="btn btn-ghost" href="contact/">Office hours &amp; location</a></div></div>
+</header>
 
-<nav class="mainnav">
-  <ul class="navlist wrap" style="max-width:1180px;">
-    <li><a href="#" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#approach">Our Approach</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#visit">Contact Us</a></li>
-  </ul>
-</nav>
+<div class="facts"><div class="wrap"><span class="stars">★★★★☆</span><span><b>4.1</b> on Google</span><span><b>Tooele</b></span><span><b>(435) 833-0977</b></span></div></div>
 
-<section class="hero">
-  <img class="bg" src="https://picsum.photos/seed/porterchiro-heroflat/1600/900" alt="Patient feeling relief">
-  <div class="wrap hero-content">
-    <h1>Move Without Pain,</h1>
-    <p class="sub">and Get Back to Your Day.</p>
-    <a href="tel:+14358330977" class="btn-gold">Request an Appointment</a>
+<section class=""><div class="wrap"><h2>About the practice</h2><p class="lede">We provide chiropractic care to patients in Tooele. Our focus is on careful diagnosis and relief from pain. We aim to understand each patient&#x27;s specific needs and develop a treatment plan accordingly. We strive to create a welcoming environment where patients feel at ease.</p><p style="margin-top:16px"><a href="about/">Read more →</a></p></div></section>
+<section class="alt"><div class="wrap"><h2>What we treat</h2><div class="grid"><div class="card"><h3>Chiropractic Care</h3><p>Relieves back and joint pain through manual adjustments.</p></div><div class="card"><h3>X-Rays</h3><p>Uses diagnostic imaging to inform careful diagnosis.</p></div><div class="card"><h3>Spinal Decompression Therapy</h3><p>A non-invasive treatment for herniated discs and spinal stenosis.</p></div></div><p style="margin-top:18px"><a href="services/">See everything →</a></p></div></section>
+<section class=""><div class="wrap"><h2>What customers say</h2><div class="revbox"><div><div class="big">4.1 ★</div><div style="color:var(--muted);font-size:15px;margin-top:6px">from 30 Google reviews</div></div><a class="btn btn-solid" style="background:var(--accent);color:#fff" href="https://maps.google.com/?cid=7166769149078984340&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Read them on Google</a></div></div></section>
+<div class="urgency"><div class="wrap"><span>Book an appointment</span><a href="tel:+14358330977">Call (435) 833-0977</a></div></div>
+
+<footer><div class="wrap">
+  <div><strong style="color:#fff">Porter Family Chiropractic - Kip Porter DC</strong> · Tooele</div>
+  <div style="margin-top:10px">
+    Proposed design by <a href="#">Beehive Digital Solutions</a>. Built 2026-08-15.
+    Not affiliated with or authorized by Porter Family Chiropractic - Kip Porter DC.
   </div>
-</section>
+</div></footer>
 
-<div class="icon-strip">
-  <div class="wrap">
-    <div class="icon-tile">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v6M8 4c0 3 1 4 4 4s4-1 4-4M8 20c0-3 1-4 4-4s4 1 4 4M6 9c0 5 2 7 6 7s6-2 6-7"/></svg>
-      <p>Spinal Care</p>
-    </div>
-    <div class="icon-tile">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8c2 3 14 3 16 0M4 8c0 6 4 10 8 10s8-4 8-10"/></svg>
-      <p>Gentle Adjustments</p>
-    </div>
-    <div class="icon-tile">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="6" r="3"/><path d="M6 21v-4a6 6 0 0112 0v4"/></svg>
-      <p>Physical Therapy</p>
-    </div>
-    <div class="icon-tile">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.35-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3.5C13 5.5 15 4 17 4c4 0 6 4 4.5 8-2.5 4.65-9.5 9-9.5 9z"/></svg>
-      <p>Family Care</p>
-    </div>
-  </div>
-</div>
-
-<section id="about">
-  <div class="wrap">
-    <div class="section-title">
-      <p class="kicker">Since 1998</p>
-      <h2>A Hometown Practice, Run Like Family</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="about-grid">
-      <img src="https://picsum.photos/seed/porterchiro-flatdoc/700/860" alt="Dr. Kip Porter">
-      <div class="about-copy">
-        <p>Dr. Kip Porter opened Porter Family Chiropractic on South Main Street nearly three decades ago with one goal: give Tooele Valley an alternative to popping and twisting adjustments that actually felt good to receive.</p>
-        <p>Today, the same small team still greets patients by name, still uses the gentle Pro-Adjuster&reg; technique that started it all, and treats every visit &mdash; whether it's a sports injury, an auto accident, or a chronic ache &mdash; like it's happening to someone they know.</p>
-        <div class="about-quote">
-          "I used to call chiropractors quacks. After two visits with Dr. Porter, the numbness in my face I'd had for two years was gone."
-          <small>&mdash; Longtime patient, Tooele</small>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="section-title">
-      <p class="kicker">What We Treat</p>
-      <h2>Chiropractic &amp; Physical Therapy Care</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="services-list">
-      <div class="service-item"><h3>Back &amp; Sciatica Pain</h3><p>Gentle correction for disc-related pain, sciatica, and everyday low-back strain.</p></div>
-      <div class="service-item"><h3>Neck &amp; Shoulder Pain</h3><p>Relief for stiffness, tension, and postural strain built up from years on the job.</p></div>
-      <div class="service-item"><h3>Headaches &amp; Migraines</h3><p>Targeted adjustment for tension headaches rooted in spinal misalignment.</p></div>
-      <div class="service-item"><h3>Auto Accident Injury</h3><p>Whiplash and collision-related injury care, with documentation for your claim.</p></div>
-      <div class="service-item"><h3>Sports Injuries</h3><p>Getting Tooele's athletes &mdash; weekend warriors and student athletes alike &mdash; back in the game.</p></div>
-      <div class="service-item"><h3>Physical Therapy</h3><p>Rehabilitative exercise and therapy to support and extend your adjustment's results.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="approach-section" id="approach">
-  <div class="wrap">
-    <div class="approach-grid">
-      <div class="approach-copy">
-        <p class="kicker">Our Approach</p>
-        <h2>No Twisting. No Popping. No Guesswork.</h2>
-        <p>We use the Pro-Adjuster&reg;, a precise, computer-guided instrument that finds and corrects misalignment without the forceful manual manipulation people associate with "cracking your back." It's why patients who were nervous about chiropractic care become our most loyal regulars.</p>
-      </div>
-      <div>
-        <div class="approach-item"><div class="num">1</div><div><h4>Precise Diagnostics</h4><p>Pinpoint where your body is actually out of alignment before we treat it.</p></div></div>
-        <div class="approach-item"><div class="num">2</div><div><h4>Instrument-Assisted Adjustment</h4><p>Low-force, consistent correction &mdash; no manual twisting required.</p></div></div>
-        <div class="approach-item"><div class="num">3</div><div><h4>Physical Therapy Support</h4><p>Rehab exercises that help results last well after you leave the office.</p></div></div>
-        <div class="approach-item"><div class="num">4</div><div><h4>Telehealth Available</h4><p>Follow-up consultations from home when an in-office visit isn't needed.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="reviews">
-  <div class="wrap">
-    <div class="section-title">
-      <p class="kicker">Reviews</p>
-      <h2>What Tooele Valley Says</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-box">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="quote">No neck twisting or back popping &mdash; Dr. Porter's gentle approach actually works, and the whole team feels like friends.</p>
-        <div class="who">Google Review</div>
-      </div>
-      <div class="review-box">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="quote">Three visits a week for months, and every single one has been a pleasure. My back has never felt better.</p>
-        <div class="who">Yelp Review</div>
-      </div>
-      <div class="review-box">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="quote">Friendly, funny staff and equipment that's genuinely advanced. I felt improvement after my very first visit.</p>
-        <div class="who">Patient Review</div>
-      </div>
-    </div>
-    <p class="rec-line"><b>96%</b> of patients recommend Porter Family Chiropractic &mdash; based on 25 verified reviews.</p>
-  </div>
-</section>
-
-<section id="visit">
-  <div class="wrap">
-    <div class="section-title">
-      <p class="kicker">Visit Us</p>
-      <h2>On South Main, in Downtown Tooele</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="visit-grid">
-      <div>
-        <div class="visit-row"><div class="k">Address</div><div class="v">275 S Main St<small>Tooele, UT 84074</small></div></div>
-        <div class="visit-row"><div class="k">Phone</div><div class="v"><a href="tel:+14358330977">(435) 833-0977</a></div></div>
-        <div class="visit-row"><div class="k">Web</div><div class="v"><a href="http://www.probackdoc.com" target="_blank" rel="noopener">probackdoc.com</a></div></div>
-        <div class="visit-row"><div class="k">Hours</div><div class="v">Monday &ndash; Friday<small>Call ahead to confirm current hours</small></div></div>
-        <div style="margin-top:26px;">
-          <a href="tel:+14358330977" class="btn-gold">Call to Book</a>
-        </div>
-      </div>
-      <div class="map-box">
-        <iframe loading="lazy" src="https://www.google.com/maps?q=275+S+Main+St,+Tooele,+UT+84074&output=embed"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="fname">Porter Family Chiropractic</div>
-    <div>275 S Main St, Tooele, UT 84074 &middot; (435) 833-0977</div>
-    <div class="flinks">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#visit">Contact</a>
-    </div>
-    <div>&copy; 2026 Porter Family Chiropractic Inc. All rights reserved.</div>
-  </div>
-</footer>
-
+<div class="sticky"><a href="tel:+14358330977">Book an appointment &middot; (435) 833-0977</a></div>
 </body>
 </html>
