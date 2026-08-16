@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Madeline&#x27;s Academy of Dance Instruction — Syracuse</title>
-<meta name="description" content="Excellence in Dance Instruction for Young Artists">
+<meta name="description" content="Expert Dance Instruction in a Safe and Supportive Environment">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap">
@@ -88,11 +88,56 @@
   .sticky a{display:block;text-align:center;color:var(--accent-dark);background:#fff;
     text-decoration:none;font-weight:700;padding:13px;border-radius:var(--r)}
 
-  nav.main{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-  nav.main a{color:#ffffff;text-decoration:none;font-family:'Nunito', Helvetica, Arial, sans-serif;font-size:15.5px;
-    opacity:.86;text-transform:none;letter-spacing:0;padding:4px 0;border-bottom:2px solid transparent}
+  nav.main{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+  nav.main a{color:#ffffff;text-decoration:none;font-family:'Nunito', Helvetica, Arial, sans-serif;font-size:12.5px;
+    opacity:.82;text-transform:uppercase;letter-spacing:.07em;font-weight:700;
+    padding:6px 0;border-bottom:2px solid transparent}
   nav.main a:hover{opacity:1}
-  nav.main a.on{opacity:1;border-bottom-color:#ffffff;font-weight:600}
+  nav.main a.on{opacity:1;border-bottom-color:#ffffff}
+
+  /* identity block — name, phone, address in one bordered card */
+  .logobox{border:2px solid #ffffff;background:rgba(255,255,255,.07);padding:12px 22px;
+    text-align:center;line-height:1.35}
+  .logobox .lname{font-family:'Baloo 2', Verdana, sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;
+    text-transform:none}
+  .logobox .lphone{font-family:'Baloo 2', Verdana, sans-serif;font-weight:700;font-size:15px;margin-top:3px}
+  .logobox .laddr{font-size:11.5px;opacity:.8;margin-top:5px}
+
+  /* section headers: kicker, title, rule */
+  .shead{text-align:center;margin-bottom:34px}
+  .shead .kicker{color:var(--accent-dark);font-weight:800;text-transform:uppercase;
+    font-size:12.5px;letter-spacing:.08em;margin:0 0 8px}
+  .shead h2{margin:0}
+  .shead .rule{width:56px;height:3px;background:var(--accent);margin:15px auto 0}
+  .shead.left{text-align:left}
+  .shead.left .rule{margin-left:0}
+
+  /* icon strip */
+  .strip{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0 22px}
+  .tile{padding:30px 16px;text-align:center;border-right:1px solid var(--line)}
+  .tile:last-child{border-right:none}
+  .tile svg{color:var(--accent-dark);margin:0 auto 10px;display:block}
+  .tile p{margin:0;font-size:12.5px;font-weight:700;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.04em}
+
+  /* numbered process */
+  .step{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .step .num{font-family:'Baloo 2', Verdana, sans-serif;font-weight:700;color:var(--accent);font-size:22px;
+    flex-shrink:0;min-width:26px}
+  .step h4{margin:0 0 4px;font-size:16px;font-family:'Nunito', Helvetica, Arial, sans-serif;font-weight:700;color:var(--ink)}
+  .step p{margin:0;color:var(--muted);font-size:14.5px}
+
+  /* contact rows + map */
+  .vrow{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .vrow:first-child{padding-top:0}
+  .vrow .k{font-weight:700;color:var(--ink);width:92px;flex-shrink:0;font-size:14px}
+  .vrow .v{color:var(--muted);font-size:15px}
+  .vrow .v small{display:block;color:var(--muted);opacity:.8;margin-top:2px}
+  .mapbox{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;
+    background:var(--surface)}
+  .mapbox iframe{width:100%;height:100%;border:0;display:block}
   .menubtn{display:none;background:none;border:1.5px solid rgba(255,255,255,.5);color:#ffffff;
     border-radius:var(--r);padding:8px 13px;font:600 15px 'Nunito', Helvetica, Arial, sans-serif;cursor:pointer}
 
@@ -109,8 +154,14 @@
     padding:14px 28px;border-radius:var(--r);font:700 16px 'Nunito', Helvetica, Arial, sans-serif;cursor:pointer}
   .formnote{margin-top:12px;font-size:14px;color:var(--muted);min-height:1.2em}
 
+  @media(max-width:760px){
+    .strip .wrap{grid-template-columns:repeat(2,1fr)}
+    .tile{border-bottom:1px solid var(--line)}
+    .tile:nth-child(2n){border-right:none}
+  }
   @media(max-width:820px){
     .split{grid-template-columns:1fr}
+    .logobox{display:none}
     .navcall{display:none}
     .sticky{display:block}
     body{padding-bottom:76px}
@@ -130,18 +181,20 @@
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="./" style="color:inherit;text-decoration:none">Madeline&#x27;s Academy of Dance Instruction</a>
+    <a href="./" style="color:inherit;text-decoration:none"><div class="logobox"><div class="lname">Madeline&#x27;s Academy of Dance Instruction</div><div class="laddr">Park Plaza, 1808 W 1800 N D, Clinton</div></div></a>
     <button class="menubtn" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
     <nav class="main" id="nav"><a class="on" href="./">Home</a><a class="" href="about/">About us</a><a class="" href="services/">Programs</a><a class="" href="contact/">Contact</a></nav>
     
   </div>
-  <div class="wrap hero"><h1>Excellence in Dance Instruction for Young Artists</h1><p class="sub">Sports School serving Syracuse and the surrounding area.</p><div class="cta"><a class="btn btn-ghost" href="contact/">Hours &amp; location</a></div></div>
+  <div class="wrap hero"><h1>Expert Dance Instruction in a Safe and Supportive Environment</h1><p class="sub">Sports School serving Syracuse and the surrounding area.</p><div class="cta"><a class="btn btn-ghost" href="contact/">Hours &amp; location</a></div></div>
 </header>
+
+<div class="strip"><div class="wrap"><div class="tile"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3.5C13 5.5 15 4 17 4c4 0 6 4 4.5 8-2.5 4.65-9.5 9-9.5 9z"/></svg><p>Warm &amp; safe</p></div><div class="tile"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z M4 21v-2a6 6 0 016-6h4a6 6 0 016 6v2"/></svg><p>Experienced staff</p></div><div class="tile"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2z M3 10h18 M8 2v4 M16 2v4"/></svg><p>Flexible schedule</p></div><div class="tile"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><p>Secure facility</p></div></div></div>
 
 <div class="facts"><div class="wrap"><span class="stars">★★★★★</span><span><b>4.9</b> on Google</span><span><b>Syracuse</b></span></div></div>
 
-<section class=""><div class="wrap"><h2>About us</h2><p class="lede">We provide instruction in various dance styles at Madeline&#x27;s Academy of Dance Instruction in Syracuse. Our program includes classes that cover tumbling and other related activities. We aim to maintain a safe and organized environment for students.</p><p style="margin-top:16px"><a href="about/">Read more →</a></p></div></section>
-<section class="alt"><div class="wrap"><h2>Programs</h2><div class="grid"><div class="card"><h3>Dance Instruction</h3><p>Offers classes in dance for children.</p></div><div class="card"><h3>Tumbling Classes</h3><p>Provides instruction and practice in tumbling skills.</p></div><div class="card"><h3>Academy of Dance</h3><p>Teaches various styles of dance to kids.</p></div></div><p style="margin-top:18px"><a href="services/">See everything →</a></p></div></section>
+<section class=""><div class="wrap"><div class="shead"><p class="kicker">Sports School in Syracuse</p><h2>About us</h2><div class="rule"></div></div><p class="lede" style="margin:0 auto;text-align:center">At Madeline&#x27;s Academy of Dance Instruction, we provide a structured learning environment with qualified instructors. Our dance programs are designed to promote physical development and technique. We maintain a safe and organized space for students to learn and grow.</p><p style="margin-top:18px;text-align:center"><a href="about/">Read more →</a></p></div></section>
+<section class="alt"><div class="wrap"><div class="shead"><p class="kicker">What we do</p><h2>Programs</h2><div class="rule"></div></div><div class="grid"><div class="card"><h3>Dance Classes</h3><p>Instruction in various dance styles for kids.</p></div><div class="card"><h3>Tumbling Classes</h3><p>Skills development in tumbling and gymnastics.</p></div><div class="card"><h3>Private Lessons</h3><p>One-on-one instruction tailored to individual needs.</p></div></div><p style="margin-top:20px;text-align:center"><a href="services/">See everything →</a></p></div></section>
 <section class=""><div class="wrap"><h2>What customers say</h2><div class="revbox"><div><div class="big">4.9 ★</div><div style="color:var(--muted);font-size:15px;margin-top:6px">from 18 Google reviews</div></div><a class="btn btn-solid" style="background:var(--accent);color:#fff" href="https://maps.google.com/?cid=3612029032332486178&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Read them on Google</a></div></div></section>
 
 <footer><div class="wrap">
